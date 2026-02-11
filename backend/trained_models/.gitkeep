@@ -1,0 +1,34 @@
+# Trained Models Directory
+
+This directory stores trained model artifacts:
+
+- **Brain 1a**: KMeans clustering models and Markov transition matrices (.pkl)
+- **Brain 1b**: Genetic algorithm optimization results (.json)
+- **Brain 2**: DQN policy networks (.pth)
+
+## Subdirectories (created during training)
+
+```
+trained_models/
+├── brain_1a/
+│   ├── kmeans_model.pkl
+│   ├── markov_matrix.pkl
+│   └── metadata.json
+├── brain_1b/
+│   ├── best_configuration.json
+│   └── convergence_history.json
+└── brain_2/
+    ├── dqn_policy.pth
+    ├── training_metrics.json
+    └── final_config.json
+```
+
+## Model Versioning
+
+Use semantic versioning in filenames:
+- `model_v1.0.0.pkl`
+- Include training date in metadata
+
+## .gitignore
+
+Large model files should be added to `.gitignore` and stored separately.

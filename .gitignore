@@ -1,0 +1,131 @@
+# ============================================================================
+# IEMS - .gitignore
+# ============================================================================
+
+# Python
+# ----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environment
+# ----------------------------------------------------------------------------
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+# ----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+# ----------------------------------------------------------------------------
+.ipynb_checkpoints
+*.ipynb
+
+# Testing
+# ----------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# Environment Variables
+# ----------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+
+# Logs
+# ----------------------------------------------------------------------------
+logs/
+*.log
+
+# Trained Models (large files)
+# ----------------------------------------------------------------------------
+backend/trained_models/**/*.pth
+backend/trained_models/**/*.pkl
+backend/trained_models/**/*.h5
+backend/trained_models/**/*.onnx
+
+# Keep directory structure
+!backend/trained_models/.gitkeep
+
+# Dataset (potentially large CSV files)
+# ----------------------------------------------------------------------------
+backend/Dataset/**/*.csv
+backend/Dataset/**/*.parquet
+
+# Keep README
+!backend/Dataset/README.md
+
+# Documentation Build
+# ----------------------------------------------------------------------------
+docs/_build/
+site/
+
+# React/Frontend
+# ----------------------------------------------------------------------------
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Database
+# ----------------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# OS
+# ----------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Temporary Files
+# ----------------------------------------------------------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# ============================================================================
