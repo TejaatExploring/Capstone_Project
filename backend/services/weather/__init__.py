@@ -2,8 +2,9 @@
 Weather Service Module
 =======================
 
-NASA POWER API integration.
-Implementation: Phase 1
+NASA POWER API integration for weather data retrieval.
 """
 
-# To be implemented in Phase 1
+from .nasa_power_service import NASAPowerService
+
+__all__ = ["NASAPowerService"]

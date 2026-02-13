@@ -3,7 +3,8 @@ Physics Engine Module
 ======================
 
 Deterministic energy system simulation.
-Implementation: Phase 1
 """
 
-# To be implemented in Phase 1
+from .physics_engine import PhysicsEngine
+
+__all__ = ["PhysicsEngine"]

@@ -1,0 +1,1414 @@
+﻿
+================================================================================
+ 48-Hour Simulation Start
+================================================================================
+
+  System Configuration:
+    PV Capacity:        10.0 kW
+    Battery Capacity:   20.0 kWh
+    Battery Power:      5.0 kW
+    Panel Efficiency:   20%
+    Inverter Efficiency: 96%
+    Battery Efficiency: 95%
+    Min SoC:            20%
+    Max SoC:            90%
+2026-02-11 23:08:28,619 - backend.services.physics.physics_engine - INFO - PhysicsEngine initialized
+
+  Simulation Duration: 48 hours (2 days)
+  Control Strategy: Neutral (control_action = 0.0)
+
+--------------------------------------------------------------------------------
+Hour  0 | Day 1, Hour 00:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   12.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:      -1.00 kW  (discharging)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          44.7%
+    Energy:        8.95 kWh / 20.0 kWh
+    Cycles:       0.053
+
+  Economics:
+    Total Cost:     $   0.45
+    Total Revenue:  $   0.00
+    Net Cost:       $   0.45
+
+  Metrics:
+    Unmet Load:    1.00 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  1 | Day 1, Hour 01:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   12.5 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:      -1.00 kW  (discharging)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          39.5%
+    Energy:        7.89 kWh / 20.0 kWh
+    Cycles:       0.105
+
+  Economics:
+    Total Cost:     $   0.90
+    Total Revenue:  $   0.00
+    Net Cost:       $   0.90
+
+  Metrics:
+    Unmet Load:    2.00 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  2 | Day 1, Hour 02:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   13.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:      -1.00 kW  (discharging)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          34.2%
+    Energy:        6.84 kWh / 20.0 kWh
+    Cycles:       0.158
+
+  Economics:
+    Total Cost:     $   1.35
+    Total Revenue:  $   0.00
+    Net Cost:       $   1.35
+
+  Metrics:
+    Unmet Load:    3.00 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  3 | Day 1, Hour 03:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   13.5 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:      -1.00 kW  (discharging)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          28.9%
+    Energy:        5.79 kWh / 20.0 kWh
+    Cycles:       0.211
+
+  Economics:
+    Total Cost:     $   1.80
+    Total Revenue:  $   0.00
+    Net Cost:       $   1.80
+
+  Metrics:
+    Unmet Load:    4.00 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  4 | Day 1, Hour 04:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   14.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:      -1.00 kW  (discharging)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          23.7%
+    Energy:        4.74 kWh / 20.0 kWh
+    Cycles:       0.263
+
+  Economics:
+    Total Cost:     $   2.25
+    Total Revenue:  $   0.00
+    Net Cost:       $   2.25
+
+  Metrics:
+    Unmet Load:    5.00 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  5 | Day 1, Hour 05:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   14.5 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:      -0.70 kW  (discharging)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   2.70
+    Total Revenue:  $   0.00
+    Net Cost:       $   2.70
+
+  Metrics:
+    Unmet Load:    6.30 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  6 | Day 1, Hour 06:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:           50.0 W/m▓
+    Temperature:   15.0 ░C
+
+  Power Flows:
+    PV Output:     0.46 kW
+    Load Demand:   3.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.81 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   3.27
+    Total Revenue:  $   0.00
+    Net Cost:       $   3.27
+
+  Metrics:
+    Unmet Load:    8.84 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  7 | Day 1, Hour 07:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          150.0 W/m▓
+    Temperature:   17.5 ░C
+
+  Power Flows:
+    PV Output:     1.37 kW
+    Load Demand:   5.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          5.45 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   4.09
+    Total Revenue:  $   0.00
+    Net Cost:       $   4.09
+
+  Metrics:
+    Unmet Load:   12.47 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  8 | Day 1, Hour 08:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          300.0 W/m▓
+    Temperature:   20.0 ░C
+
+  Power Flows:
+    PV Output:     2.71 kW
+    Load Demand:   7.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          6.44 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   0.00
+    Net Cost:       $   5.05
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     0.00 kWh
+
+--------------------------------------------------------------------------------
+Hour  9 | Day 1, Hour 09:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          500.0 W/m▓
+    Temperature:   22.5 ░C
+
+  Power Flows:
+    PV Output:     4.46 kW
+    Load Demand:   4.00 kW
+    Battery:       0.23 kW  (charging)
+    Grid:         -0.70 kW  (exporting)
+
+  Battery State:
+    SoC:          21.1%
+    Energy:        4.22 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   0.06
+    Net Cost:       $   5.00
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     0.23 kWh
+
+--------------------------------------------------------------------------------
+Hour 10 | Day 1, Hour 10:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          700.0 W/m▓
+    Temperature:   25.0 ░C
+
+  Power Flows:
+    PV Output:     6.18 kW
+    Load Demand:   4.00 kW
+    Battery:       1.09 kW  (charging)
+    Grid:         -3.27 kW  (exporting)
+
+  Battery State:
+    SoC:          26.3%
+    Energy:        5.26 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   0.32
+    Net Cost:       $   4.74
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     1.32 kWh
+
+--------------------------------------------------------------------------------
+Hour 11 | Day 1, Hour 11:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          850.0 W/m▓
+    Temperature:   27.5 ░C
+
+  Power Flows:
+    PV Output:     7.43 kW
+    Load Demand:   4.00 kW
+    Battery:       1.71 kW  (charging)
+    Grid:         -5.14 kW  (exporting)
+
+  Battery State:
+    SoC:          34.4%
+    Energy:        6.88 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   0.73
+    Net Cost:       $   4.33
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     3.04 kWh
+
+--------------------------------------------------------------------------------
+Hour 12 | Day 1, Hour 12:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          900.0 W/m▓
+    Temperature:   30.0 ░C
+
+  Power Flows:
+    PV Output:     7.78 kW
+    Load Demand:   6.00 kW
+    Battery:       0.89 kW  (charging)
+    Grid:         -2.66 kW  (exporting)
+
+  Battery State:
+    SoC:          38.6%
+    Energy:        7.73 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   0.94
+    Net Cost:       $   4.11
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     3.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 13 | Day 1, Hour 13:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          850.0 W/m▓
+    Temperature:   28.0 ░C
+
+  Power Flows:
+    PV Output:     7.41 kW
+    Load Demand:   4.00 kW
+    Battery:       1.70 kW  (charging)
+    Grid:         -5.11 kW  (exporting)
+
+  Battery State:
+    SoC:          46.7%
+    Energy:        9.35 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   1.35
+    Net Cost:       $   3.70
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     5.63 kWh
+
+--------------------------------------------------------------------------------
+Hour 14 | Day 1, Hour 14:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          700.0 W/m▓
+    Temperature:   26.0 ░C
+
+  Power Flows:
+    PV Output:     6.16 kW
+    Load Demand:   4.00 kW
+    Battery:       1.08 kW  (charging)
+    Grid:         -3.23 kW  (exporting)
+
+  Battery State:
+    SoC:          51.9%
+    Energy:       10.37 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   1.61
+    Net Cost:       $   3.44
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     6.71 kWh
+
+--------------------------------------------------------------------------------
+Hour 15 | Day 1, Hour 15:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          500.0 W/m▓
+    Temperature:   24.0 ░C
+
+  Power Flows:
+    PV Output:     4.44 kW
+    Load Demand:   4.00 kW
+    Battery:       0.22 kW  (charging)
+    Grid:         -0.65 kW  (exporting)
+
+  Battery State:
+    SoC:          52.9%
+    Energy:       10.58 kWh / 20.0 kWh
+    Cycles:       0.300
+
+  Economics:
+    Total Cost:     $   5.05
+    Total Revenue:  $   1.66
+    Net Cost:       $   3.39
+
+  Metrics:
+    Unmet Load:   16.76 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 16 | Day 1, Hour 16:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          300.0 W/m▓
+    Temperature:   22.0 ░C
+
+  Power Flows:
+    PV Output:     2.68 kW
+    Load Demand:   4.00 kW
+    Battery:      -0.66 kW  (discharging)
+    Grid:          1.97 kW  (importing)
+
+  Battery State:
+    SoC:          49.4%
+    Energy:        9.89 kWh / 20.0 kWh
+    Cycles:       0.335
+
+  Economics:
+    Total Cost:     $   5.35
+    Total Revenue:  $   1.66
+    Net Cost:       $   3.69
+
+  Metrics:
+    Unmet Load:   17.42 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 17 | Day 1, Hour 17:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          150.0 W/m▓
+    Temperature:   20.0 ░C
+
+  Power Flows:
+    PV Output:     1.35 kW
+    Load Demand:   7.00 kW
+    Battery:      -2.82 kW  (discharging)
+    Grid:          8.47 kW  (importing)
+
+  Battery State:
+    SoC:          34.6%
+    Energy:        6.91 kWh / 20.0 kWh
+    Cycles:       0.483
+
+  Economics:
+    Total Cost:     $   6.62
+    Total Revenue:  $   1.66
+    Net Cost:       $   4.96
+
+  Metrics:
+    Unmet Load:   20.25 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 18 | Day 1, Hour 18:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:           50.0 W/m▓
+    Temperature:   18.0 ░C
+
+  Power Flows:
+    PV Output:     0.46 kW
+    Load Demand:   8.00 kW
+    Battery:      -2.77 kW  (discharging)
+    Grid:         11.32 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $   8.32
+    Total Revenue:  $   1.66
+    Net Cost:       $   6.66
+
+  Metrics:
+    Unmet Load:   25.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 19 | Day 1, Hour 19:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   17.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   8.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:         12.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  10.12
+    Total Revenue:  $   1.66
+    Net Cost:       $   8.46
+
+  Metrics:
+    Unmet Load:   33.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 20 | Day 1, Hour 20:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   16.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   6.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          9.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  11.47
+    Total Revenue:  $   1.66
+    Net Cost:       $   9.81
+
+  Metrics:
+    Unmet Load:   39.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 21 | Day 1, Hour 21:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   15.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   5.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          7.50 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  12.59
+    Total Revenue:  $   1.66
+    Net Cost:       $  10.93
+
+  Metrics:
+    Unmet Load:   44.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 22 | Day 1, Hour 22:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   14.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   4.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          6.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  13.49
+    Total Revenue:  $   1.66
+    Net Cost:       $  11.83
+
+  Metrics:
+    Unmet Load:   48.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 23 | Day 1, Hour 23:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   13.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   3.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          4.50 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  14.17
+    Total Revenue:  $   1.66
+    Net Cost:       $  12.51
+
+  Metrics:
+    Unmet Load:   51.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 24 | Day 2, Hour 00:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   12.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  14.62
+    Total Revenue:  $   1.66
+    Net Cost:       $  12.96
+
+  Metrics:
+    Unmet Load:   53.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 25 | Day 2, Hour 01:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   12.5 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  15.07
+    Total Revenue:  $   1.66
+    Net Cost:       $  13.41
+
+  Metrics:
+    Unmet Load:   55.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 26 | Day 2, Hour 02:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   13.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  15.52
+    Total Revenue:  $   1.66
+    Net Cost:       $  13.86
+
+  Metrics:
+    Unmet Load:   57.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 27 | Day 2, Hour 03:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   13.5 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  15.97
+    Total Revenue:  $   1.66
+    Net Cost:       $  14.31
+
+  Metrics:
+    Unmet Load:   59.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 28 | Day 2, Hour 04:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   14.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  16.42
+    Total Revenue:  $   1.66
+    Net Cost:       $  14.76
+
+  Metrics:
+    Unmet Load:   61.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 29 | Day 2, Hour 05:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   14.5 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   2.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  16.87
+    Total Revenue:  $   1.66
+    Net Cost:       $  15.21
+
+  Metrics:
+    Unmet Load:   63.02 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 30 | Day 2, Hour 06:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:           50.0 W/m▓
+    Temperature:   15.0 ░C
+
+  Power Flows:
+    PV Output:     0.46 kW
+    Load Demand:   3.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          3.81 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  17.44
+    Total Revenue:  $   1.66
+    Net Cost:       $  15.78
+
+  Metrics:
+    Unmet Load:   65.56 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 31 | Day 2, Hour 07:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          150.0 W/m▓
+    Temperature:   17.5 ░C
+
+  Power Flows:
+    PV Output:     1.37 kW
+    Load Demand:   5.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          5.45 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  18.26
+    Total Revenue:  $   1.66
+    Net Cost:       $  16.60
+
+  Metrics:
+    Unmet Load:   69.19 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 32 | Day 2, Hour 08:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          300.0 W/m▓
+    Temperature:   20.0 ░C
+
+  Power Flows:
+    PV Output:     2.71 kW
+    Load Demand:   7.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          6.44 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   1.66
+    Net Cost:       $  17.56
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:     6.92 kWh
+
+--------------------------------------------------------------------------------
+Hour 33 | Day 2, Hour 09:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          500.0 W/m▓
+    Temperature:   22.5 ░C
+
+  Power Flows:
+    PV Output:     4.46 kW
+    Load Demand:   4.00 kW
+    Battery:       0.23 kW  (charging)
+    Grid:         -0.70 kW  (exporting)
+
+  Battery State:
+    SoC:          21.1%
+    Energy:        4.22 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   1.72
+    Net Cost:       $  17.51
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:     7.16 kWh
+
+--------------------------------------------------------------------------------
+Hour 34 | Day 2, Hour 10:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          700.0 W/m▓
+    Temperature:   25.0 ░C
+
+  Power Flows:
+    PV Output:     6.18 kW
+    Load Demand:   4.00 kW
+    Battery:       1.09 kW  (charging)
+    Grid:         -3.27 kW  (exporting)
+
+  Battery State:
+    SoC:          26.3%
+    Energy:        5.26 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   1.98
+    Net Cost:       $  17.24
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:     8.25 kWh
+
+--------------------------------------------------------------------------------
+Hour 35 | Day 2, Hour 11:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          850.0 W/m▓
+    Temperature:   27.5 ░C
+
+  Power Flows:
+    PV Output:     7.43 kW
+    Load Demand:   4.00 kW
+    Battery:       1.71 kW  (charging)
+    Grid:         -5.14 kW  (exporting)
+
+  Battery State:
+    SoC:          34.4%
+    Energy:        6.88 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   2.39
+    Net Cost:       $  16.83
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:     9.96 kWh
+
+--------------------------------------------------------------------------------
+Hour 36 | Day 2, Hour 12:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          900.0 W/m▓
+    Temperature:   30.0 ░C
+
+  Power Flows:
+    PV Output:     7.78 kW
+    Load Demand:   6.00 kW
+    Battery:       0.89 kW  (charging)
+    Grid:         -2.66 kW  (exporting)
+
+  Battery State:
+    SoC:          38.6%
+    Energy:        7.73 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   2.60
+    Net Cost:       $  16.62
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:    10.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 37 | Day 2, Hour 13:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          850.0 W/m▓
+    Temperature:   28.0 ░C
+
+  Power Flows:
+    PV Output:     7.41 kW
+    Load Demand:   4.00 kW
+    Battery:       1.70 kW  (charging)
+    Grid:         -5.11 kW  (exporting)
+
+  Battery State:
+    SoC:          46.7%
+    Energy:        9.35 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   3.01
+    Net Cost:       $  16.21
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:    12.55 kWh
+
+--------------------------------------------------------------------------------
+Hour 38 | Day 2, Hour 14:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          700.0 W/m▓
+    Temperature:   26.0 ░C
+
+  Power Flows:
+    PV Output:     6.16 kW
+    Load Demand:   4.00 kW
+    Battery:       1.08 kW  (charging)
+    Grid:         -3.23 kW  (exporting)
+
+  Battery State:
+    SoC:          51.9%
+    Energy:       10.37 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   3.27
+    Net Cost:       $  15.95
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:    13.63 kWh
+
+--------------------------------------------------------------------------------
+Hour 39 | Day 2, Hour 15:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          500.0 W/m▓
+    Temperature:   24.0 ░C
+
+  Power Flows:
+    PV Output:     4.44 kW
+    Load Demand:   4.00 kW
+    Battery:       0.22 kW  (charging)
+    Grid:         -0.65 kW  (exporting)
+
+  Battery State:
+    SoC:          52.9%
+    Energy:       10.58 kWh / 20.0 kWh
+    Cycles:       0.629
+
+  Economics:
+    Total Cost:     $  19.22
+    Total Revenue:  $   3.32
+    Net Cost:       $  15.90
+
+  Metrics:
+    Unmet Load:   73.49 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 40 | Day 2, Hour 16:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          300.0 W/m▓
+    Temperature:   22.0 ░C
+
+  Power Flows:
+    PV Output:     2.68 kW
+    Load Demand:   4.00 kW
+    Battery:      -0.66 kW  (discharging)
+    Grid:          1.97 kW  (importing)
+
+  Battery State:
+    SoC:          49.4%
+    Energy:        9.89 kWh / 20.0 kWh
+    Cycles:       0.664
+
+  Economics:
+    Total Cost:     $  19.52
+    Total Revenue:  $   3.32
+    Net Cost:       $  16.20
+
+  Metrics:
+    Unmet Load:   74.14 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 41 | Day 2, Hour 17:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:          150.0 W/m▓
+    Temperature:   20.0 ░C
+
+  Power Flows:
+    PV Output:     1.35 kW
+    Load Demand:   7.00 kW
+    Battery:      -2.82 kW  (discharging)
+    Grid:          8.47 kW  (importing)
+
+  Battery State:
+    SoC:          34.6%
+    Energy:        6.91 kWh / 20.0 kWh
+    Cycles:       0.812
+
+  Economics:
+    Total Cost:     $  20.79
+    Total Revenue:  $   3.32
+    Net Cost:       $  17.47
+
+  Metrics:
+    Unmet Load:   76.97 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 42 | Day 2, Hour 18:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:           50.0 W/m▓
+    Temperature:   18.0 ░C
+
+  Power Flows:
+    PV Output:     0.46 kW
+    Load Demand:   8.00 kW
+    Battery:      -2.77 kW  (discharging)
+    Grid:         11.32 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.958
+
+  Economics:
+    Total Cost:     $  22.49
+    Total Revenue:  $   3.32
+    Net Cost:       $  19.16
+
+  Metrics:
+    Unmet Load:   81.74 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 43 | Day 2, Hour 19:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   17.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   8.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:         12.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.958
+
+  Economics:
+    Total Cost:     $  24.29
+    Total Revenue:  $   3.32
+    Net Cost:       $  20.96
+
+  Metrics:
+    Unmet Load:   89.74 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 44 | Day 2, Hour 20:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   16.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   6.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          9.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.958
+
+  Economics:
+    Total Cost:     $  25.64
+    Total Revenue:  $   3.32
+    Net Cost:       $  22.31
+
+  Metrics:
+    Unmet Load:   95.74 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 45 | Day 2, Hour 21:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   15.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   5.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          7.50 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.958
+
+  Economics:
+    Total Cost:     $  26.76
+    Total Revenue:  $   3.32
+    Net Cost:       $  23.44
+
+  Metrics:
+    Unmet Load:  100.74 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 46 | Day 2, Hour 22:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   14.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   4.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          6.00 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.958
+
+  Economics:
+    Total Cost:     $  27.66
+    Total Revenue:  $   3.32
+    Net Cost:       $  24.34
+
+  Metrics:
+    Unmet Load:  104.74 kWh
+    Excess PV:    13.85 kWh
+
+--------------------------------------------------------------------------------
+Hour 47 | Day 2, Hour 23:00
+--------------------------------------------------------------------------------
+  Weather:
+    GHI:            0.0 W/m▓
+    Temperature:   13.0 ░C
+
+  Power Flows:
+    PV Output:     0.00 kW
+    Load Demand:   3.00 kW
+    Battery:       0.00 kW  (idle)
+    Grid:          4.50 kW  (importing)
+
+  Battery State:
+    SoC:          20.0%
+    Energy:        4.00 kWh / 20.0 kWh
+    Cycles:       0.958
+
+  Economics:
+    Total Cost:     $  28.34
+    Total Revenue:  $   3.32
+    Net Cost:       $  25.01
+
+  Metrics:
+    Unmet Load:  107.74 kWh
+    Excess PV:    13.85 kWh
+
+================================================================================
+ Day 1 Summary (24 hours)
+================================================================================
+
+  Energy Production & Consumption:
+    Total PV Generation:      52.88 kWh
+    Total Load:              102.00 kWh
+    Net Balance:             -49.12 kWh
+
+  Battery Activity:
+    Total Charged:             6.92 kWh
+    Total Discharged:         11.95 kWh
+    Start SoC:               50.0%
+    End SoC:                 20.0%
+    SoC Change:             -30.0%
+    Cycles:                  0.629
+
+  Grid Interaction:
+    Total Import:             94.46 kWh
+    Total Export:             20.77 kWh
+    Net Grid Usage:           73.68 kWh
+
+  Economics:
+    Daily Cost:             $  14.17
+    Daily Revenue:          $   1.66
+    Net Daily Cost:         $  12.51
+
+  Self-Sufficiency:
+    PV/Load Ratio:            51.8%
+    Grid Independence:         7.4%
+
+================================================================================
+ Day 2 Summary (24 hours)
+================================================================================
+
+  Energy Production & Consumption:
+    Total PV Generation:      52.88 kWh
+    Total Load:              102.00 kWh
+    Net Balance:             -49.12 kWh
+
+  Battery Activity:
+    Total Charged:             6.92 kWh
+    Total Discharged:          6.25 kWh
+    Start SoC:               20.0%
+    End SoC:                 20.0%
+    SoC Change:              +0.0%
+    Cycles:                  0.329
+
+  Grid Interaction:
+    Total Import:             94.46 kWh
+    Total Export:             20.77 kWh
+    Net Grid Usage:           73.68 kWh
+
+  Economics:
+    Daily Cost:             $  14.17
+    Daily Revenue:          $   1.66
+    Net Daily Cost:         $  12.51
+
+  Self-Sufficiency:
+    PV/Load Ratio:            51.8%
+    Grid Independence:         7.4%
+
+================================================================================
+ Final Summary (48 hours)
+================================================================================
+
+  Simulation Period:
+    Total Hours:            48
+    Total Days:             2.0
+
+  Energy Totals:
+    Total PV Generation:     105.75 kWh
+    Total Load:              204.00 kWh
+    Total Grid Import:       188.91 kWh
+    Total Grid Export:        41.54 kWh
+    Unmet Load:              107.74 kWh
+    Excess PV:                13.85 kWh
+
+  Battery Performance:
+    Initial SoC:            50.0%
+    Final SoC:               20.0%
+    Total Cycles:            0.958
+    Estimated Lifetime:       3132 periods
+
+  Financial Summary:
+    Total Cost:             $  28.34
+    Total Revenue:          $   3.32
+    Net Cost:               $  25.01
+    Average Cost/Day:       $  12.51
+
+  System Efficiency:
+    PV Utilization:           48.5%
+    Self-Sufficiency:          7.4%
+    Grid Export Ratio:        39.3%
+
+================================================================================
+ Simulation Complete
+================================================================================
+
