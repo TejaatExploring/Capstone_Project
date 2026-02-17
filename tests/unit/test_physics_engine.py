@@ -439,3 +439,88 @@ class TestEdgeCases:
         # Should still work correctly with small timestep
         assert 0.2 <= result.new_soc <= 0.9
         assert result.energy_stored < 1.0  # Small energy change
+    
+    def test_energy_balance_grid_calculation(self, physics_engine, standard_specs):
+        """
+        Test that grid power calculation maintains energy balance.
+        
+        This test verifies the fix for the critical bug where grid power
+        was incorrectly calculated due to wrong battery sign convention.
+        
+        Scenario: Load=2kW, PV=0kW, Battery discharges 1kW
+        Expected: Grid=1kW (Load - PV - Battery_discharge = 2 - 0 - 1 = 1)
+        Bug produced: Grid=3kW (due to wrong sign handling)
+        """
+        # Setup: Battery at 50% SoC
+        state = SystemState(
+            timestep=0,
+            soc=0.5,
+            pv_power=0.0,
+            load_demand=0.0,
+            battery_power=0.0,
+            grid_power=0.0,
+            total_cost=0.0,
+            total_revenue=0.0,
+            battery_cycles=0.0,
+            unmet_load=0.0,
+            excess_pv=0.0
+        )
+        
+        # Test Case 1: Battery discharges to help meet load
+        step_input = SimulationStepInput(
+            ghi=0.0,  # No solar (night time)
+            temperature=25.0,
+            load_demand=2.0,  # 2 kW load
+            control_action=-0.2  # Discharge (negative control action)
+        )
+        
+        new_state = physics_engine.step(state, standard_specs, step_input)
+        
+        # Verify energy balance: Load = PV + Battery_discharge + Grid_import
+        # Example: 2.0 = 0.0 + ~1.2 + ~0.8
+        
+        assert new_state.pv_power == 0.0  # No solar
+        assert new_state.battery_power < 0  # Discharging (negative)
+        
+        # The critical test: Verify energy balance is maintained
+        battery_discharge = abs(new_state.battery_power)
+        expected_grid = step_input.load_demand - new_state.pv_power - battery_discharge
+        assert abs(new_state.grid_power - expected_grid) < 0.01  # Within 10W tolerance
+        
+        # This is the key fix verification:
+        # OLD BUG: Grid = Load - PV - battery_power = 2 - 0 - (-1.2) = 3.2 (WRONG!)
+        # FIXED:   Grid = Load - PV + battery_power = 2 - 0 + (-1.2) = 0.8 (CORRECT!)
+        
+        # Verify energy conservation
+        energy_in = new_state.pv_power + battery_discharge + (new_state.grid_power if new_state.grid_power > 0 else 0)
+        energy_out = step_input.load_demand + (abs(new_state.grid_power) if new_state.grid_power < 0 else 0)
+        assert abs(energy_in - energy_out) < 1e-3  # Within 1W tolerance
+        
+        # Test Case 2: Battery charges from excess PV
+        step_input2 = SimulationStepInput(
+            ghi=1000.0,  # Full sun
+            temperature=25.0,
+            load_demand=5.0,  # 5 kW load
+            control_action=0.6  # Charge battery
+        )
+        
+        new_state2 = physics_engine.step(state, standard_specs, step_input2)
+        
+        # Verify energy balance: Load + Battery_charge + Grid_export = PV + Grid_import
+        assert new_state2.pv_power > 0  # Solar producing
+        assert new_state2.battery_power > 0  # Charging (positive)
+        
+        # Grid should balance: Grid = Load - PV + Battery_charge
+        battery_charge = new_state2.battery_power
+        expected_grid = step_input2.load_demand - new_state2.pv_power + battery_charge
+        assert abs(new_state2.grid_power - expected_grid) < 0.01
+        
+        # Energy conservation check
+        battery_contrib = abs(new_state2.battery_power) if new_state2.battery_power < 0 else 0
+        battery_consume = new_state2.battery_power if new_state2.battery_power > 0 else 0
+        grid_import = new_state2.grid_power if new_state2.grid_power > 0 else 0
+        grid_export = abs(new_state2.grid_power) if new_state2.grid_power < 0 else 0
+        
+        energy_in = new_state2.pv_power + battery_contrib + grid_import
+        energy_out = step_input2.load_demand + battery_consume + grid_export
+        assert abs(energy_in - energy_out) < 1e-3  # Within 1W tolerance

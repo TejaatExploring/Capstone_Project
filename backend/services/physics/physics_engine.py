@@ -316,31 +316,43 @@ class PhysicsEngine(IPhysicsEngine):
             )
             battery_result = self.simulate_battery(battery_input)
             
-            # Step 5: Calculate grid power
-            # Grid power = Load - PV - Battery discharge
-            # Positive = import, Negative = export
+            # Step 5: Calculate grid power using strict energy balance
+            # ========================================================
+            # SIGN CONVENTION:
+            # - battery_result.actual_power_flow > 0: Battery CHARGING (consuming power)
+            # - battery_result.actual_power_flow < 0: Battery DISCHARGING (providing power)
+            #
+            # ENERGY BALANCE EQUATION:
+            # Load_demand = PV_power + Battery_discharge + Grid_import
+            #
+            # Rearranging:
+            # Grid = Load - PV + Battery_power (since charging adds to demand)
+            #
+            # Grid > 0: Importing from grid
+            # Grid < 0: Exporting to grid
+            
             grid_power = (
-                step_input.load_demand
-                - pv_power
-                - battery_result.actual_power_flow  # -ve if discharging
+                step_input.load_demand 
+                - pv_power 
+                + battery_result.actual_power_flow  # Charging is positive, adds to demand
             )
             
-            # Account for any additional grid power from battery simulation
-            total_grid_power = grid_power + battery_result.grid_power
+            # Note: battery_result.grid_power is NOT used here - it's already accounted for
+            # in battery_result.actual_power_flow (battery limits what it can provide)
             
             # Step 6: Calculate costs
             # Simple cost model (will be enhanced in Brain 2)
             electricity_cost = 0.15  # USD/kWh
             sell_price = 0.08  # USD/kWh
             
-            if total_grid_power > 0:
+            if grid_power > 0:
                 # Importing
-                step_cost = total_grid_power * electricity_cost
+                step_cost = grid_power * electricity_cost
                 step_revenue = 0.0
             else:
                 # Exporting
                 step_cost = 0.0
-                step_revenue = abs(total_grid_power) * sell_price
+                step_revenue = abs(grid_power) * sell_price
             
             # Step 7: Track battery degradation (cycles)
             # One full cycle = discharge from 100% to 0%
@@ -348,21 +360,48 @@ class PhysicsEngine(IPhysicsEngine):
             cycle_increment = energy_throughput / specs.battery_capacity_kwh
             
             # Step 8: Track unmet load and excess PV
-            unmet_load = max(step_input.load_demand - pv_power - abs(battery_result.actual_power_flow), 0.0)
-            excess_pv = max(pv_power - step_input.load_demand - battery_result.actual_power_flow, 0.0) if total_grid_power < 0 else 0.0
+            # =======================================
+            # ASSUMPTION: Grid has unlimited capacity
+            # Therefore, unmet_load = 0 (grid can always meet demand)
+            # 
+            # Excess PV: Amount of PV generation exported to grid (couldn't use locally)
+            unmet_load = 0.0  # Unlimited grid assumption
+            excess_pv = abs(grid_power) if grid_power < 0 else 0.0
             
-            # Step 9: Create new system state
+            # Step 9: Energy conservation validation (optional debug check)
+            # =============================================================
+            # Total Energy IN:  PV + Battery_discharge + Grid_import
+            # Total Energy OUT: Load + Battery_charge + Grid_export
+            # These should balance (within numerical tolerance)
+            
+            battery_discharge = abs(battery_result.actual_power_flow) if battery_result.actual_power_flow < 0 else 0.0
+            battery_charge = battery_result.actual_power_flow if battery_result.actual_power_flow > 0 else 0.0
+            grid_import = grid_power if grid_power > 0 else 0.0
+            grid_export = abs(grid_power) if grid_power < 0 else 0.0
+            
+            energy_in = pv_power + battery_discharge + grid_import
+            energy_out = step_input.load_demand + battery_charge + grid_export
+            energy_balance_error = abs(energy_in - energy_out)
+            
+            if energy_balance_error > 1e-3:  # Tolerance: 1 Watt
+                logger.warning(
+                    f"Energy balance violation at timestep {state.timestep + 1}: "
+                    f"IN={energy_in:.6f} kW, OUT={energy_out:.6f} kW, "
+                    f"ERROR={energy_balance_error:.6f} kW"
+                )
+            
+            # Step 10: Create new system state
             new_state = SystemState(
                 timestep=state.timestep + 1,
                 soc=battery_result.new_soc,
                 pv_power=pv_power,
                 load_demand=step_input.load_demand,
                 battery_power=battery_result.actual_power_flow,
-                grid_power=total_grid_power,
+                grid_power=grid_power,  # Corrected: no longer double-counting
                 total_cost=state.total_cost + step_cost,
                 total_revenue=state.total_revenue + step_revenue,
                 battery_cycles=state.battery_cycles + cycle_increment,
-                unmet_load=state.unmet_load + unmet_load,
+                unmet_load=state.unmet_load + unmet_load,  # Always 0 for unlimited grid
                 excess_pv=state.excess_pv + excess_pv
             )
             

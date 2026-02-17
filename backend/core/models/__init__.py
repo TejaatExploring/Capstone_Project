@@ -17,6 +17,12 @@ from .calculation_inputs import (
     BatterySimulationInput,
     SimulationStepInput
 )
+from .load_profile import (
+    LoadProfile,
+    DailyLoadProfile,
+    ClusteringResult,
+    MarkovTransitionMatrix
+)
 
 __all__ = [
     "SimulationConfig",
@@ -29,4 +35,8 @@ __all__ = [
     "PVCalculationInput",
     "BatterySimulationInput",
     "SimulationStepInput",
+    "LoadProfile",
+    "DailyLoadProfile",
+    "ClusteringResult",
+    "MarkovTransitionMatrix",
 ]
